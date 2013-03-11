@@ -21,27 +21,18 @@
 		
 		<?php tha_head_bottom(); ?>
 		<?php wp_head(); ?>
-
 		<style>
-		#page {
-			padding: 0px 0 10px;
-		}
-		.banner_nav {
-			width: 1230px;
-			margin-left:0px;
-		}
-
+			h1{
+				font-size: 26.5px;
+			}
 		</style>
 	</head>
 	
 	<body <?php body_class(); ?>>
 		<div class="container">
 			<div id="page" class="hfeed row">
-				<!--
-				<div style="background-image:url('/wp-content/uploads/2013/03/background.gif');height:210px;">
-				-->
 				<?php tha_header_before(); ?>
-				<header id="branding" role="banner" class="span12 banner_nav">
+				<header id="branding" role="banner" class="span12">
 					<?php tha_header_top();
 					wp_nav_menu( array(
 						'container'			=>	'nav',
@@ -63,8 +54,7 @@
 					
 					<?php if ( get_header_image() ) : ?>
 					<a id="header-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<!--width="<?php echo get_custom_header()->width; ?>"-->
-						<img src="<?php header_image(); ?>"  height="<?php echo get_custom_header()->height; ?>" alt="" />
+						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
 					</a>
 					<?php endif; // if ( get_header_image() ) ?>
 
@@ -106,11 +96,7 @@
 						yoast_breadcrumb( '<nav id="breadcrumb" class="breadcrumb">', '</nav>' );
 					}
 					tha_header_bottom(); ?>
-				</header>
-				<!--
-				</div>
-				-->
-				<!-- #branding --><?php
+				</header><!-- #branding --><?php
 				tha_header_after();
 				
 

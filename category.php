@@ -1,66 +1,66 @@
 <?php
-/** content.php
+/** category.php
  *
- * The default template for displaying content
+ * The template for displaying Category Archive pages.
  *
  * @author		Konstantin Obenland
  * @package		The Bootstrap
  * @since		1.0.0 - 05.02.2012
  */
 
+get_header(); ?>
 
-tha_entry_before(); ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php tha_entry_top(); ?>
+<section id="primary" class="span8">
+
+	<?php tha_content_before(); ?>
+	<div id="content" role="main">
+		<?php tha_content_top();
+
+		if ( have_posts() ) : ?>
+			<!--
+			<header class="page-header">
+				<h1 class="page-title"><?php
+					printf( __( 'Category Archives: %s', 'the-bootstrap' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+				?></h1>
 	
-	<header class="page-header">
-	<?php if ( is_sticky() AND is_home() ) : ?>
-		<hgroup>
-			<?php the_title( '<h1 class="entry-title"><a href="' . get_permalink() . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' ); ?>
-			<h3 class="entry-format"><?php _e( 'Featured', 'the-bootstrap' ); ?></h3>
-		</hgroup>
-	<?php
+				<?php if ( $category_description = category_description() ) {
+					echo apply_filters( 'category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>' );
+				} ?>
+			</header>
+			-->
+			<!-- .page-header -->
+	
+			<?php
+			if ($cat == 6) {
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				$args = array(
+				    // 以下代码中的title就是orderby的值，按标题排序
+				    'cat' => 6,
+				    'showposts' => 25,
+				    'orderby'   => title,
+				    'paged' => $paged
+				);
+				query_posts($args);
+			}
+
+			while ( have_posts() ) {
+				the_post();
+				get_template_part( '/partials/content', get_post_format() );
+			}
+			the_bootstrap_content_nav();
 		else :
-			the_title( '<h1 class="entry-title"><a href="' . get_permalink() .'" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' );
+			get_template_part( '/partials/content', 'not-found' );
 		endif;
 		
-		if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php //the_bootstrap_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+		tha_content_bottom(); ?>
+	</div><!-- #content -->
+	<?php tha_content_after(); ?>
+</section><!-- #primary -->
 
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-	<div class="entry-summary clearfix">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
-	<div class="entry-content clearfix">
-		<?php if ( has_post_thumbnail() ) : ?>
-		<a class="thumbnail post-thumbnail span2" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-			<?php the_post_thumbnail( 'thumbnail' ); ?>
-		</a>
-		<?php endif;
-		the_content( __( '阅读全文', 'the-bootstrap' ) );
-		//the_excerpt();
-		the_bootstrap_link_pages(); ?>
-	</div><!-- .entry-content -->
-	<?php endif; ?>
-
-	<footer class="entry-meta">
-		<?php
-		//$categories_list = get_the_category_list( _x( ', ', 'used between list items, there is a space after the comma', 'the-bootstrap' ) );
-
-		//if ( 'post' == get_post_type() AND $categories_list ) // Hide category text for pages on Search
-		//	printf( '<span class="cat-links block">' . __( 'Posted in %1$s.', 'the-bootstrap' ) . '</span>', $categories_list );
-		?>
-	</footer><!-- #entry-meta -->
-	
-	<?php tha_entry_bottom(); ?>
-</article><!-- #post-<?php the_ID(); ?> -->
-<?php tha_entry_after();
+<?php
+get_sidebar();
+get_footer();
 
 
-/* End of file content.php */
-/* Location: ./wp-content/themes/the-bootstrap/partials/content.php */
+/* End of file index.php */
+/* Location: ./wp-content/themes/the-bootstrap/category.php */
