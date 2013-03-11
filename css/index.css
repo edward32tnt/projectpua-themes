@@ -1,0 +1,137 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family:"宋体";
+	font-size:12px;
+	margin:0px;
+	padding:0px;
+	text-align:center;	
+	background-image:url(/wp-content/themes/mybootstrap/img/background.gif);
+}
+
+/* 最外层阴影边框 */
+#shadow { 
+	background:url(/wp-content/themes/mybootstrap/img/shadow-sides.png);
+	margin:50px auto 0px auto;
+	width:940px;
+	position:relative;
+	text-align:left;
+}
+
+/* 最上面的横条 */
+#header {
+	background:url(/wp-content/themes/mybootstrap/img/header.jpg);
+	margin:0px auto;
+	width:900px;
+	height:45px;
+}
+
+/* 中间的横幅图片 */
+#banner {
+	width:900px;
+	height:250px;
+	margin:0px auto;
+}
+#banner img {
+	border:none;
+}
+
+/* 横幅图片下面的消息横幅 */
+#message {
+	background-color:#000000;
+	width:900px;
+	height:50px;
+	margin:0px auto;
+	padding:0px;
+	text-align:left;
+	text-indent:40px;
+}
+#message p {
+	color:#ffffff;
+	margin:0px;
+	padding:0px;
+	line-height:50px;
+	font-size:18px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:100;  /* 字体粗细 */
+}
+#message p span {
+	color:#666666;
+}
+
+/* 三列内容 */
+#content {
+	background-color:rgb(255, 255, 255);
+	width:900px;
+	height:180px;
+	margin:0px auto;
+}
+
+/* 类选择器 */
+.row {
+	margin: 0px auto; 
+	width: 900px;
+	overflow:hidden;
+}
+
+/* 左下圆角 */
+.brBL {
+	border-bottom-left-radius: 5px; 
+	-webkit-border-bottom-left-radius: 5px; 
+	-moz-border-bottom-left-radius: 5px; 
+	-o-border-bottom-left-radius: 5px; 
+	-ms-border-bottom-left-radius: 5px; 
+	-khtml-border-bottom-left-radius: 5px;
+}
+/* 右下圆角 */
+.brBR {
+	border-bottom-right-radius: 5px; 
+	-webkit-border-bottom-right-radius: 5px; 
+	-moz-border-bottom-right-radius: 5px; 
+	-o-border-bottom-right-radius: 5px; 
+	-ms-border-bottom-right-radius: 5px; 
+	-khtml-border-bottom-right-radius: 5px;
+}
+
+.aboutp1-180 {
+	height: 180px; 
+	position: relative;
+}
+
+#welcome {
+	background-position: 0px -30px; 
+	width:600px;
+	float:left;	
+}
+
+#nestnews {
+	width:300px;
+	float:left;
+}
+
+#users {
+	width:300px;
+	float:left;
+}
+
+/* 水平方向填充为20px */
+.pH-20 {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.aboutp1-bL {
+	height: 141px; 
+	border-left-color:	rgb(204, 204, 204); 
+	border-left-width: 1px; 
+	border-left-style: solid;
+}
+
+#footer {
+	width:900px;
+	margin:0px auto;
+	background:url(/wp-content/themes/mybootstrap/img/shadow-bottom.jpg) no-repeat;
+	overflow:hidden;
+	text-align:left;
+	color:#CCCCCC;
+}
