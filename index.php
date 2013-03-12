@@ -5,12 +5,12 @@
 <title>Project PUA!官方网站| 把妹达人的“NEST” PUA训练营</title>
 
 
-<link rel="stylesheet" type="text/css" href="/wp-content/themes/mybootstrap/css/index.css">
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/projectpua-themes/css/index.css">
 </head>
 
  
 <body>
-    <embed src="/wp-content/themes/mybootstrap/swf/index.swf" 
+    <embed src="/wp-content/themes/projectpua-themes/swf/index.swf" 
         quality="high" bgcolor="#ffffff" 
         width="1024" height="600"
         name="mymovie" align="middle" allowScriptAccess="sameDomain" 

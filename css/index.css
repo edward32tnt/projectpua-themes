@@ -6,12 +6,12 @@ body {
 	margin:0px;
 	padding:0px;
 	text-align:center;	
-	background-image:url(/wp-content/themes/mybootstrap/img/background.gif);
+	background-image:url(/wp-content/themes/projectpua-themes/img/background.gif);
 }
 
 /* 最外层阴影边框 */
 #shadow { 
-	background:url(/wp-content/themes/mybootstrap/img/shadow-sides.png);
+	background:url(/wp-content/themes/projectpua-themes/img/shadow-sides.png);
 	margin:50px auto 0px auto;
 	width:940px;
 	position:relative;
@@ -20,7 +20,7 @@ body {
 
 /* 最上面的横条 */
 #header {
-	background:url(/wp-content/themes/mybootstrap/img/header.jpg);
+	background:url(/wp-content/themes/projectpua-themes/img/header.jpg);
 	margin:0px auto;
 	width:900px;
 	height:45px;
@@ -130,7 +130,7 @@ body {
 #footer {
 	width:900px;
 	margin:0px auto;
-	background:url(/wp-content/themes/mybootstrap/img/shadow-bottom.jpg) no-repeat;
+	background:url(/wp-content/themes/projectpua-themes/img/shadow-bottom.jpg) no-repeat;
 	overflow:hidden;
 	text-align:left;
 	color:#CCCCCC;
