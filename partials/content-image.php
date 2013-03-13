@@ -17,7 +17,7 @@ tha_entry_before(); ?>
 	
 	<div class="entry-content clearfix">
 		<?php
-		the_content( __( '阅读全文', 'the-bootstrap' ) );
+		the_content( __( '&gt;&gt; 阅读全文 &lt;&lt; ', 'the-bootstrap' ) );
 		the_bootstrap_link_pages(); ?>
 	</div><!-- .entry-content -->
 

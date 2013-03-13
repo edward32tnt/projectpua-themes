@@ -19,7 +19,7 @@ tha_entry_before(); ?>
 
 	<div class="entry-content clearfix">
 		<?php
-		the_content( __( '阅读全文', 'the-bootstrap' ) );
+		the_content( __( '&gt;&gt; 阅读全文 &lt;&lt; ', 'the-bootstrap' ) );
 		the_bootstrap_link_pages(); ?>
 	</div><!-- .entry-content -->
 	<?php edit_post_link( __( 'Edit', 'the-bootstrap' ), '<footer class="entry-meta"><span class="edit-link label">', '</span></footer>' );
